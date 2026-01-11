@@ -370,7 +370,7 @@ export default function Dashboard() {
 
             <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 mb-8">
               <ChartCard title="Soil Moisture" icon={<Droplets />}>
-                <ResponsiveContainer width="100%" height={250}>
+                <ResponsiveContainer width="100%" height={300}>
                   <AreaChart data={chartData}>
                     <defs>
                       <linearGradient
@@ -393,8 +393,16 @@ export default function Dashboard() {
                       </linearGradient>
                     </defs>
                     <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
-                    <XAxis dataKey="time" stroke="#64748b" />
-                    <YAxis domain={[0, 100]} stroke="#64748b" />
+                    <XAxis 
+                      dataKey="time" 
+                      stroke="#64748b" 
+                      angle={-45}
+                      textAnchor="end"
+                      height={70}
+                      interval="preserveStartEnd"
+                      style={{ fontSize: '12px' }}
+                    />
+                    <YAxis domain={[0, 100]} stroke="#64748b" style={{ fontSize: '12px' }} />
                     <Tooltip
                       contentStyle={{
                         backgroundColor: "#fff",
@@ -415,7 +423,7 @@ export default function Dashboard() {
               </ChartCard>
 
               <ChartCard title="Temperature" icon={<Thermometer />}>
-                <ResponsiveContainer width="100%" height={250}>
+                <ResponsiveContainer width="100%" height={300}>
                   <AreaChart data={chartData}>
                     <defs>
                       <linearGradient
@@ -438,8 +446,16 @@ export default function Dashboard() {
                       </linearGradient>
                     </defs>
                     <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
-                    <XAxis dataKey="time" stroke="#64748b" />
-                    <YAxis stroke="#64748b" />
+                    <XAxis 
+                      dataKey="time" 
+                      stroke="#64748b" 
+                      angle={-45}
+                      textAnchor="end"
+                      height={70}
+                      interval="preserveStartEnd"
+                      style={{ fontSize: '12px' }}
+                    />
+                    <YAxis stroke="#64748b" style={{ fontSize: '12px' }} />
                     <Tooltip
                       contentStyle={{
                         backgroundColor: "#fff",
@@ -460,7 +476,7 @@ export default function Dashboard() {
               </ChartCard>
 
               <ChartCard title="Light Level" icon={<Sun />}>
-                <ResponsiveContainer width="100%" height={250}>
+                <ResponsiveContainer width="100%" height={300}>
                   <AreaChart data={chartData}>
                     <defs>
                       <linearGradient
@@ -483,8 +499,16 @@ export default function Dashboard() {
                       </linearGradient>
                     </defs>
                     <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
-                    <XAxis dataKey="time" stroke="#64748b" />
-                    <YAxis stroke="#64748b" />
+                    <XAxis 
+                      dataKey="time" 
+                      stroke="#64748b" 
+                      angle={-45}
+                      textAnchor="end"
+                      height={70}
+                      interval="preserveStartEnd"
+                      style={{ fontSize: '12px' }}
+                    />
+                    <YAxis stroke="#64748b" style={{ fontSize: '12px' }} />
                     <Tooltip
                       contentStyle={{
                         backgroundColor: "#fff",
@@ -509,15 +533,24 @@ export default function Dashboard() {
               title="Combined Analytics Dashboard"
               icon={<Activity />}
             >
-              <ResponsiveContainer width="100%" height={400}>
+              <ResponsiveContainer width="100%" height={450}>
                 <LineChart data={chartData}>
                   <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
-                  <XAxis dataKey="time" stroke="#64748b" />
-                  <YAxis yAxisId="left" stroke="#64748b" />
+                  <XAxis 
+                    dataKey="time" 
+                    stroke="#64748b" 
+                    angle={-45}
+                    textAnchor="end"
+                    height={70}
+                    interval="preserveStartEnd"
+                    style={{ fontSize: '12px' }}
+                  />
+                  <YAxis yAxisId="left" stroke="#64748b" style={{ fontSize: '12px' }} />
                   <YAxis
                     yAxisId="right"
                     orientation="right"
                     stroke="#64748b"
+                    style={{ fontSize: '12px' }}
                   />
                   <Tooltip
                     contentStyle={{
